@@ -1,0 +1,10 @@
+import { Routes, Route } from 'react-router-dom'
+import SiteLayout from './layouts/SiteLayout.jsx'
+import Home from './pages/Home.jsx'
+import About from './pages/About.jsx'
+import Courses from './pages/Courses.jsx'
+import Blog from './pages/Blog.jsx'
+import Contact from './pages/Contact.jsx'
+import Admin from './pages/Admin.jsx'
+import NotFound from './pages/NotFound.jsx'
+export default function App(){return <Routes><Route element={<SiteLayout/>}><Route path="/" element={<Home/>}/><Route path="/about" element={<About/>}/><Route path="/courses" element={<Courses/>}/><Route path="/blog" element={<Blog/>}/><Route path="/contact" element={<Contact/>}/></Route><Route path="/admin" element={<Admin/>}/><Route path="*" element={<NotFound/>}/></Routes>}

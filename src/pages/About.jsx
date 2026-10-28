@@ -1,0 +1,5 @@
+import {BookOpen,Users,Target,HeartHandshake} from 'lucide-react'
+import PageHero from '../components/PageHero.jsx'
+import './About.css'
+const values=[[Target,'Our Mission','Add your institute mission.'],[BookOpen,'Our Vision','Add your institute vision.'],[HeartHandshake,'Student Support','Describe your actual student support services.'],[Users,'Our Community','Describe your learning community.']]
+export default function About(){return <><PageHero title="About Our Institute" text="Learn about our approach, values and commitment to education."/><section className="section"><div className="container about-content"><p className="eyebrow">OUR STORY</p><h2>Education with purpose.</h2><p>Replace this sample content with the verified history and introduction of your institute. Explain when it was established, whom it serves and what educational opportunities it offers.</p><p>Only publish verified information about affiliations, approvals, achievements and facilities.</p><div className="about-value-grid">{values.map(([Icon,title,text])=><article className="about-value-card" key={title}><Icon/><h3>{title}</h3><p>{text}</p></article>)}</div></div></section></>}

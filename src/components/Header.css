@@ -1,0 +1,297 @@
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #fff;
+}
+
+.site-header .topbar {
+  background: #175744;
+  color: #fff;
+}
+
+.topbar-inner {
+  width: min(1480px, calc(100% - 48px));
+  min-height: 42px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.social-link {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 32px;
+  flex-shrink: 0;
+  color: #fff;
+  background: #ffffff12;
+  transition: background 0.2s ease;
+}
+
+.social-link:hover {
+  background: #ffffff28;
+}
+
+.topbar-contact {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.topbar-contact a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.topbar-contact a:hover {
+  color: #f5c64d;
+}
+
+.site-header .nav-wrap {
+  background: #fff;
+  box-shadow: 0 3px 15px #1710270b;
+}
+
+.site-header .nav-inner {
+  width: min(1480px, calc(100% - 48px));
+  min-height: 94px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.site-header .brand {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  min-width: 0;
+  margin-left: 8px;
+}
+
+.site-header .brand-logo {
+  display: block;
+  width: 235px;
+  height: 78px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.site-header .nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(16px, 2vw, 30px);
+}
+
+.site-header .nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 12px 0;
+  color: #252b38;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.site-header .nav-link:hover,
+.site-header .nav-link.active {
+  color: #17664d;
+}
+
+.admission-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 22px;
+  margin-left: 4px;
+  border-radius: 10px;
+  background: linear-gradient(110deg, #206d50, #101010);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admission-button:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 7px 18px #17574430;
+}
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: #175744;
+  cursor: pointer;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1050px) {
+  .topbar-inner {
+    width: calc(100% - 32px);
+  }
+
+  .site-header .nav-inner {
+    width: calc(100% - 32px);
+    min-height: 84px;
+    gap: 14px;
+  }
+
+  .site-header .brand-logo {
+    width: 205px;
+    height: 70px;
+  }
+
+  .site-header .nav-links {
+    gap: 12px;
+  }
+
+  .site-header .nav-link {
+    font-size: 12px;
+  }
+
+  .admission-button {
+    min-height: 44px;
+    padding: 0 12px;
+    font-size: 11px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 760px) {
+  .topbar-inner {
+    width: calc(100% - 24px);
+    min-height: 40px;
+    gap: 8px;
+  }
+
+  .social-link {
+    width: 30px;
+    height: 30px;
+  }
+
+  .topbar-contact {
+    gap: 10px;
+  }
+
+  .topbar-contact a {
+    gap: 5px;
+    font-size: 10px;
+  }
+
+  .topbar-contact svg {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+  }
+
+  .site-header .nav-inner {
+    width: calc(100% - 24px);
+    min-height: 72px;
+    gap: 8px;
+  }
+
+  .site-header .brand {
+    margin-left: 4px;
+    min-width: 0;
+  }
+
+  .site-header .brand-logo {
+    width: 195px;
+    height: 64px;
+    max-width: 100%;
+  }
+
+  .menu-toggle {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    padding: 8px;
+  }
+
+  .site-header .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 3px;
+    padding: 16px 22px 22px;
+    background: #fff;
+    box-shadow: 0 14px 22px #0000001f;
+  }
+
+  .site-header .nav-links.open {
+    display: flex;
+  }
+
+  .site-header .nav-link {
+    justify-content: space-between;
+    padding: 13px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+  }
+
+  .admission-button {
+    min-height: 46px;
+    margin: 10px 0 0;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 380px) {
+  .topbar-contact {
+    gap: 7px;
+  }
+
+  .topbar-contact a {
+    font-size: 9px;
+  }
+
+  .site-header .nav-inner {
+    min-height: 68px;
+  }
+
+  .site-header .brand-logo {
+    width: 170px;
+    height: 60px;
+  }
+
+  .menu-toggle {
+    padding: 6px;
+  }
+}

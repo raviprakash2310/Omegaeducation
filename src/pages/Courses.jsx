@@ -1,0 +1,6 @@
+import {Link} from 'react-router-dom'
+import {ArrowRight,BookOpen} from 'lucide-react'
+import PageHero from '../components/PageHero.jsx'
+import './Courses.css'
+import {courses} from '../data/courses.js'
+export default function Courses(){return <><PageHero title="Explore Our Courses" text="Find the learning pathway that fits your goals. Course information below is placeholder content until you provide your actual catalogue."/><section className="section"><div className="container"><div className="courses-grid">{courses.map((course,i)=><article className="courses-card" key={course.code}><div className={`courses-icon courses-icon-${i}`}><BookOpen size={25}/></div><span className="courses-code">{course.code}</span><h3>{course.name}</h3><p>{course.description}</p><p><strong>Duration:</strong> {course.duration}</p><Link className="courses-link" to="/contact">Enquire About This Course <ArrowRight size={16}/></Link></article>)}</div><p className="notice">Confirm course names, eligibility, duration, fees and availability before publishing.</p></div></section></>}
