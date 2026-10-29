@@ -35,33 +35,62 @@ const courseGroups = [
   },
   {
     category: 'Hotel Management',
-    description: 'Explore learning opportunities in hotel management.',
+    description: 'Explore hospitality and hotel management programmes.',
     courses: ['Hotel Management'],
   },
   {
     category: 'Yoga Courses',
-    description: 'Explore yoga programmes and available qualifications.',
+    description: 'Explore yoga programmes and qualifications.',
     courses: ['Yoga Courses - All Degree/Diploma'],
   },
   {
     category: 'Vocational Programmes',
-    description: 'Explore teacher training and other vocational options.',
+    description: 'Explore teacher training and vocational options.',
     courses: ['N.T.T.', 'All Vocational Degree/Diploma'],
   },
 ];
 
-const allCourses = courseGroups.flatMap((group) =>
-  group.courses.map((name) => ({
-    name,
-    category: group.category,
-  }))
-);
+const courseDescriptions = {
+  BA: 'Explore arts, humanities and a wide range of subjects.',
+  MA: 'Explore advanced study options in arts and humanities.',
+  'B.Com': 'Discover commerce, accounting and business studies.',
+  'M.Com': 'Explore advanced commerce and financial studies.',
+  'B.Sc': 'Discover science subjects and further study options.',
+  'M.Sc': 'Explore advanced science study opportunities.',
+  BBA: 'Explore business administration and management.',
+  BCA: 'Discover computer applications and IT studies.',
+  MBA: 'Explore management and business education.',
+  MCA: 'Discover advanced computer application studies.',
+  'B.Lib': 'Explore library science and information services.',
+  'M.Lib': 'Explore advanced library and information studies.',
+  'B.Tech': 'Discover engineering and technology study options.',
+  'M.Tech': 'Explore advanced engineering and technology studies.',
+  LLB: 'Explore legal education and law studies.',
+  'BA.LLB': 'Explore an integrated arts and law programme.',
+  'B.Ed': 'Explore education and teacher training studies.',
+  'M.Ed': 'Explore advanced education studies.',
+  'D.Pharma': 'Explore pharmaceutical education options.',
+  'B.Pharma': 'Discover pharmacy education and study options.',
+  ANM: 'Explore nursing and community healthcare studies.',
+  GNM: 'Explore nursing education and training options.',
+  'B.Sc Nursing': 'Discover nursing and healthcare education.',
+  PhD: 'Explore doctoral research and academic opportunities.',
+  'ITI Courses - All Trades': 'Explore vocational and technical training options.',
+  'Polytechnic - All Trades': 'Discover diploma and technical learning options.',
+  'Hotel Management': 'Explore hospitality and hotel management studies.',
+  'Yoga Courses - All Degree/Diploma': 'Explore yoga education programmes.',
+  'N.T.T.': 'Explore nursery teacher training options.',
+  'All Vocational Degree/Diploma': 'Discover vocational learning and diploma options.',
+};
 
 export default function Courses() {
   const [search, setSearch] = useState('');
   const [activeCategory, setActiveCategory] = useState('All Courses');
 
-  const categories = ['All Courses', ...courseGroups.map((group) => group.category)];
+  const categories = [
+    'All Courses',
+    ...courseGroups.map((group) => group.category),
+  ];
 
   const filteredGroups = useMemo(() => {
     const query = search.trim().toLowerCase();
@@ -74,13 +103,11 @@ export default function Courses() {
       )
       .map((group) => ({
         ...group,
-        courses: group.courses.filter((name) => {
-          const matchesSearch =
-            name.toLowerCase().includes(query) ||
-            group.category.toLowerCase().includes(query);
-
-          return matchesSearch;
-        }),
+        courses: group.courses.filter(
+          (course) =>
+            course.toLowerCase().includes(query) ||
+            group.category.toLowerCase().includes(query)
+        ),
       }))
       .filter((group) => group.courses.length > 0);
   }, [search, activeCategory]);
@@ -97,7 +124,6 @@ export default function Courses() {
           <div className="courses-intro-icon">
             <GraduationCap size={32} />
           </div>
-
           <div>
             <span className="courses-eyebrow">YOUR FUTURE STARTS HERE</span>
             <h2>Find the Right Course for Your Goals</h2>
@@ -166,24 +192,38 @@ export default function Courses() {
                   </div>
 
                   <div className="courses-grid">
-                    {group.courses.map((course) => (
-                      <article className="courses-card" key={course}>
-                        <div className="courses-card-icon">
-                          <BookOpen size={23} />
+                    {group.courses.map((course, index) => (
+                      <article
+                        className={`courses-card courses-card-tone-${index % 6}`}
+                        key={course}
+                      >
+                        <div className="courses-card-top">
+                          <div className="courses-card-icon">
+                            <BookOpen size={25} />
+                          </div>
+                          <span className="courses-card-dots" aria-hidden="true">
+                            ⠿
+                          </span>
                         </div>
 
                         <div className="courses-card-content">
                           <span className="courses-card-category">
                             {group.category}
                           </span>
+
                           <h4>{course}</h4>
+
+                          <p className="courses-card-description">
+                            {courseDescriptions[course] ||
+                              'Contact our team to learn about this programme and available options.'}
+                          </p>
 
                           <Link
                             className="courses-link"
                             to="/contact"
                             state={{ course }}
                           >
-                            Enquire Now <ArrowRight size={16} />
+                            Enquire Now <ArrowRight size={19} />
                           </Link>
                         </div>
                       </article>
@@ -222,16 +262,14 @@ export default function Courses() {
           <div className="courses-cta-icon">
             <MessageCircle size={28} />
           </div>
-
           <div className="courses-cta-copy">
             <span className="courses-eyebrow">NEED HELP?</span>
             <h2>Not Sure Which Course to Choose?</h2>
             <p>
               Contact our team to discuss your interests and get information
-              about the available courses and admission process.
+              about available courses and the admission process.
             </p>
           </div>
-
           <Link className="courses-cta-button" to="/contact">
             Contact Us <ArrowRight size={18} />
           </Link>

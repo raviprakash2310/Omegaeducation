@@ -1,177 +1,292 @@
 
 import { useState } from 'react';
-import { Mail, MapPin, Phone, Send, Navigation } from 'lucide-react';
-import PageHero from '../components/PageHero.jsx';
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Send,
+  ExternalLink,
+  Clock,
+  MessageCircle,
+} from 'lucide-react';
 import './Contact.css';
 
+const PHONE = '9891160799';
+const EMAIL = 'kantroyuday@gmail.com';
+const ADDRESS = 'Street 16A, Kaushik Enclave, Burari, Delhi';
+
 export default function Contact() {
-  const [submitted, setSubmitted] = useState(false);
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    course: '',
+    message: '',
+  });
 
-  const address = 'Street 16A, Kaushik Enclave, Burari, Delhi';
+  const handleChange = (event) => {
+    setForm({ ...form, [event.target.name]: event.target.value });
+  };
 
-  const mapUrl =
-    'https://maps.google.com/maps?q=Street%2016A%2C%20Kaushik%20Enclave%2C%20Burari%2C%20Delhi&t=&z=16&ie=UTF8&iwloc=&output=embed';
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
-  const directionsUrl =
-    'https://www.google.com/maps/dir/?api=1&destination=Street+16A%2C+Kaushik+Enclave%2C+Burari%2C+Delhi';
+    const message = [
+      'Hello Omega Higher Education Centre,',
+      '',
+      `Name: ${form.name}`,
+      `Email: ${form.email}`,
+      `Phone: ${form.phone}`,
+      `Course of Interest: ${form.course || 'Not specified'}`,
+      `Message: ${form.message}`,
+    ].join('\n');
+
+    window.open(
+      `https://wa.me/91${PHONE}?text=${encodeURIComponent(message)}`,
+      '_blank',
+      'noopener,noreferrer'
+    );
+  };
 
   return (
-    <>
-      <PageHero
-        title="Contact Us"
-        text="Have a question about courses or admissions? Get in touch."
-      />
-
-      <section className="section">
-        <div className="container contact-grid">
-          <div className="contact-details">
-            <p className="eyebrow">GET IN TOUCH</p>
-            <h2>We are here to help.</h2>
-            <p>
-              Have questions about admissions or courses? Contact
-              Omega Higher Education Centre or visit our location.
-            </p>
-
-            <div className="contact-item">
-              <MapPin />
-              <div>
-                <strong>Address</strong>
-                <span>{address}</span>
-              </div>
-            </div>
-
-            <div className="contact-item">
-              <Phone />
-              <div>
-                <strong>Phone</strong>
-                <a href="tel:9891160799">9891160799</a>
-              </div>
-            </div>
-
-            <div className="contact-item">
-              <Mail />
-              <div>
-                <strong>Email</strong>
-                <span>hello@example.com</span>
-              </div>
-            </div>
-
-            <a
-              className="contact-directions"
-              href={directionsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Navigation size={18} />
-              Get Directions
-            </a>
-          </div>
-
-          <form
-            className="contact-form"
-            onSubmit={(e) => {
-              e.preventDefault();
-              setSubmitted(true);
-            }}
-          >
-            <h3>Send an Enquiry</h3>
-
-            <label>
-              Full name
-              <input required name="name" placeholder="Your full name" />
-            </label>
-
-            <label>
-              Email address
-              <input
-                required
-                type="email"
-                name="email"
-                placeholder="you@example.com"
-              />
-            </label>
-
-            <label>
-              Phone number
-              <input
-                name="phone"
-                type="tel"
-                placeholder="Your phone number"
-              />
-            </label>
-
-            <label>
-              Course of interest
-              <input name="course" placeholder="Course name (optional)" />
-            </label>
-
-            <label>
-              Message
-              <textarea
-                required
-                name="message"
-                rows="4"
-                placeholder="How can we help?"
-              />
-            </label>
-
-            <button className="button" type="submit">
-              Submit Enquiry <Send size={16} />
-            </button>
-
-            {submitted && (
-              <p className="form-message">
-                Demo only: this form has not sent your message.
-                Connect a backend to receive enquiries.
-              </p>
-            )}
-          </form>
+    <main className="contact-page">
+      <section className="contact-hero">
+        <div className="contact-container">
+          <span className="contact-eyebrow">GET IN TOUCH</span>
+          <h1>
+            Let’s Plan Your <span>Future Together</span>
+          </h1>
+          <p>
+            Have questions about admissions or courses? Our team is
+            here to help you explore your educational opportunities.
+          </p>
         </div>
       </section>
 
-      <section className="contact-location-section">
-        <div className="container">
-          <div className="contact-location-heading">
-            <p className="eyebrow">FIND US</p>
+      <section className="contact-main">
+        <div className="contact-container">
+          <div className="contact-layout">
+            <aside className="contact-info-card">
+              <span className="contact-small-label">CONTACT DETAILS</span>
+              <h2>We’re Here to Help</h2>
+              <p className="contact-info-intro">
+                Reach out to us for course information, admission
+                guidance or help choosing your next step.
+              </p>
+
+              <div className="contact-info-list">
+                <div className="contact-info-item">
+                  <span className="contact-info-icon">
+                    <MapPin size={22} />
+                  </span>
+                  <div>
+                    <h3>Our Address</h3>
+                    <p>{ADDRESS}</p>
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=Street%2016A%2C%20Kaushik%20Enclave%2C%20Burari%2C%20Delhi"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Get Directions <ExternalLink size={14} />
+                    </a>
+                  </div>
+                </div>
+
+                <div className="contact-info-item">
+                  <span className="contact-info-icon">
+                    <Phone size={22} />
+                  </span>
+                  <div>
+                    <h3>Call Us</h3>
+                    <a href={`tel:${PHONE}`}>{PHONE}</a>
+                    <span className="contact-info-note">
+                      Speak with our team
+                    </span>
+                  </div>
+                </div>
+
+                <div className="contact-info-item">
+                  <span className="contact-info-icon">
+                    <Mail size={22} />
+                  </span>
+                  <div>
+                    <h3>Email Address</h3>
+                    <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+                    <span className="contact-info-note">
+                      Send us your questions
+                    </span>
+                  </div>
+                </div>
+
+                <div className="contact-info-item">
+                  <span className="contact-info-icon">
+                    <Clock size={22} />
+                  </span>
+                  <div>
+                    <h3>Admission Enquiries</h3>
+                    <p>Contact us to discuss course availability and admissions.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="contact-whatsapp-box">
+                <div className="contact-whatsapp-icon">
+                  <MessageCircle size={24} />
+                </div>
+                <div>
+                  <h3>Prefer WhatsApp?</h3>
+                  <p>Send us your enquiry directly.</p>
+                </div>
+                <a
+                  href={`https://wa.me/91${PHONE}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Chat with us on WhatsApp"
+                >
+                  <ExternalLink size={18} />
+                </a>
+              </div>
+            </aside>
+
+            <section className="contact-form-card">
+              <span className="contact-small-label">SEND AN ENQUIRY</span>
+              <h2>How Can We Help You?</h2>
+              <p className="contact-form-intro">
+                Fill in your details below. Your enquiry will open in
+                WhatsApp so you can send it to our team.
+              </p>
+
+              <form onSubmit={handleSubmit}>
+                <div className="contact-form-grid">
+                  <div className="contact-field">
+                    <label htmlFor="contact-name">Full Name *</label>
+                    <input
+                      id="contact-name"
+                      name="name"
+                      value={form.name}
+                      onChange={handleChange}
+                      placeholder="Enter your full name"
+                      autoComplete="name"
+                      required
+                    />
+                  </div>
+
+                  <div className="contact-field">
+                    <label htmlFor="contact-email">Email Address *</label>
+                    <input
+                      id="contact-email"
+                      name="email"
+                      type="email"
+                      value={form.email}
+                      onChange={handleChange}
+                      placeholder="you@example.com"
+                      autoComplete="email"
+                      required
+                    />
+                  </div>
+
+                  <div className="contact-field">
+                    <label htmlFor="contact-phone">Phone Number *</label>
+                    <input
+                      id="contact-phone"
+                      name="phone"
+                      type="tel"
+                      value={form.phone}
+                      onChange={handleChange}
+                      placeholder="Enter your phone number"
+                      autoComplete="tel"
+                      pattern="[0-9+\s()-]{8,18}"
+                      required
+                    />
+                  </div>
+
+                  <div className="contact-field">
+                    <label htmlFor="contact-course">Course of Interest</label>
+                    <select
+                      id="contact-course"
+                      name="course"
+                      value={form.course}
+                      onChange={handleChange}
+                    >
+                      <option value="">Select a course</option>
+                      <option value="Undergraduate Programmes">
+                        Undergraduate Programmes
+                      </option>
+                      <option value="Postgraduate Programmes">
+                        Postgraduate Programmes
+                      </option>
+                      <option value="Professional Courses">
+                        Professional Courses
+                      </option>
+                      <option value="Other Course">Other</option>
+                    </select>
+                  </div>
+
+                  <div className="contact-field contact-field-full">
+                    <label htmlFor="contact-message">Your Message *</label>
+                    <textarea
+                      id="contact-message"
+                      name="message"
+                      value={form.message}
+                      onChange={handleChange}
+                      placeholder="Tell us what information you need..."
+                      rows={5}
+                      required
+                    />
+                  </div>
+                </div>
+
+                <button className="contact-submit" type="submit">
+                  Send Enquiry on WhatsApp
+                  <Send size={18} />
+                </button>
+
+                <p className="contact-privacy-note">
+                  Your messaging app will open with your enquiry ready to send.
+                </p>
+              </form>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section className="contact-map-section">
+        <div className="contact-container">
+          <div className="contact-map-heading">
+            <span className="contact-small-label">FIND OUR LOCATION</span>
             <h2>Visit Omega Higher Education Centre</h2>
-            <p>
-              Find our location in Kaushik Enclave, Burari, Delhi.
-            </p>
+            <p>{ADDRESS}</p>
           </div>
 
           <div className="contact-map-card">
-            <div className="contact-map-info">
-              <div className="contact-map-icon">
+            <div className="contact-map-details">
+              <span className="contact-map-pin">
                 <MapPin size={27} />
-              </div>
-
+              </span>
               <h3>Omega Higher Education Centre</h3>
-
-              <p>{address}</p>
-
+              <p>{ADDRESS}</p>
               <a
-                className="contact-directions"
-                href={directionsUrl}
+                className="contact-map-button"
+                href="https://www.google.com/maps/search/?api=1&query=Street%2016A%2C%20Kaushik%20Enclave%2C%20Burari%2C%20Delhi"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Navigation size={17} />
+                <MapPin size={17} />
                 Open in Google Maps
               </a>
             </div>
 
-            <div className="contact-map">
-              <iframe
-                title="Omega Higher Education Centre map, Burari, Delhi"
-                src={mapUrl}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                allowFullScreen
-              />
-            </div>
+            <iframe
+              className="contact-map-frame"
+              title="Map showing Omega Higher Education Centre in Burari, Delhi"
+              src="https://maps.google.com/maps?q=Kaushik%20Enclave%2C%20Burari%2C%20Delhi&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }

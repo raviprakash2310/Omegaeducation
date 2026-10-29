@@ -1,29 +1,31 @@
 
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import {
   ArrowRight,
   BookOpen,
   Users,
   Award,
   GraduationCap,
-} from 'lucide-react'
+  Eye,
+  Target,
+} from 'lucide-react';
 
-import PageHero from '../components/PageHero'
-import './Home.css'
-import { courses } from '../data/courses.js'
+import PageHero from '../components/PageHero';
+import './Home.css';
+import { courses } from '../data/courses.js';
 
 export default function Home() {
   return (
     <>
-      {/* Hero Section */}
+      {/* HERO SECTION */}
       <PageHero />
 
-      {/* About Our Institute */}
+      {/* ABOUT OMEGA */}
       <section className="omega-about">
         <div className="omega-about-container">
           <div className="omega-about-copy">
             <p className="omega-about-eyebrow">
-              <GraduationCap size={18} />
+              <GraduationCap size={19} />
               ABOUT OMEGA
             </p>
 
@@ -42,7 +44,7 @@ export default function Home() {
 
             <div className="omega-about-actions">
               <Link to="/about" className="omega-about-button">
-                Know More About Us <ArrowRight size={19} />
+                Know More About Us <ArrowRight size={18} />
               </Link>
 
               <a
@@ -61,7 +63,7 @@ export default function Home() {
             <div className="omega-about-main-image">
               <img
                 src="/images/omega-campus.jpg"
-                alt="Omega Higher Education Centre campus"
+                alt="Omega Higher Education Centre"
               />
 
               <div className="omega-experience-badge">
@@ -74,11 +76,11 @@ export default function Home() {
             <div className="omega-feature-cards">
               <article className="omega-feature-card">
                 <div className="omega-feature-icon">
-                  <BookOpen size={30} />
+                  <BookOpen size={27} />
                 </div>
 
                 <div>
-                  <h3>Innovative Courses</h3>
+                  <h3>Learning Opportunities</h3>
                   <span className="omega-feature-line" />
                   <p>
                     Explore courses to support your educational goals.
@@ -88,11 +90,11 @@ export default function Home() {
 
               <article className="omega-feature-card">
                 <div className="omega-feature-icon">
-                  <GraduationCap size={30} />
+                  <GraduationCap size={27} />
                 </div>
 
                 <div>
-                  <h3>Student Support</h3>
+                  <h3>Student Guidance</h3>
                   <span className="omega-feature-line" />
                   <p>
                     Get guidance while planning your learning journey.
@@ -101,7 +103,6 @@ export default function Home() {
               </article>
             </div>
 
-            {/* Floating graduation cap and diploma */}
             <div className="omega-floating-graduation">
               <img
                 src="/images/graduation-cap.png"
@@ -112,8 +113,94 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Courses Section */}
-      <section className="section bg-[#f8f6fb]">
+      {/* VISION AND MISSION */}
+      <section className="omega-vision-mission">
+        <div className="container">
+          <div className="omega-vm-heading">
+            <span className="omega-vm-eyebrow">
+              <span className="omega-vm-heading-line" />
+              WHAT GUIDES US
+              <span className="omega-vm-heading-line" />
+            </span>
+
+            <h2>
+              Our <span>Vision</span> &amp; <span>Mission</span>
+            </h2>
+
+            <p>
+              Our focus is to help students explore educational opportunities
+              and make informed decisions about their future.
+            </p>
+          </div>
+
+          <div className="omega-vm-grid">
+            {/* Vision Card */}
+            <article className="omega-vm-card omega-vm-vision">
+              <div className="omega-vm-decoration omega-vm-dots" />
+              <div className="omega-vm-decoration omega-vm-bottom-shape" />
+
+              <div className="omega-vm-card-inner">
+                <div className="omega-vm-card-top">
+                  <div className="omega-vm-icon">
+                    <Eye size={30} strokeWidth={2} />
+                  </div>
+
+                  <div>
+                    <span className="omega-vm-label">OUR VISION</span>
+                    <span className="omega-vm-short-line" />
+                  </div>
+                </div>
+
+                <h3>Inspiring a Brighter Future</h3>
+
+                <p>
+                  To help learners discover educational pathways, develop
+                  their potential and work towards their academic and
+                  professional aspirations.
+                </p>
+
+                <Link to="/about" className="omega-vm-button">
+                  Learn More <ArrowRight size={17} />
+                </Link>
+              </div>
+            </article>
+
+            {/* Mission Card */}
+            <article className="omega-vm-card omega-vm-mission">
+              <div className="omega-vm-decoration omega-vm-dots" />
+              <div className="omega-vm-decoration omega-vm-bottom-shape" />
+
+              <div className="omega-vm-card-inner">
+                <div className="omega-vm-card-top">
+                  <div className="omega-vm-icon">
+                    <Target size={30} strokeWidth={2} />
+                  </div>
+
+                  <div>
+                    <span className="omega-vm-label">OUR MISSION</span>
+                    <span className="omega-vm-short-line" />
+                  </div>
+                </div>
+
+                <h3>Guiding Every Learning Journey</h3>
+
+                <p>
+                  To provide students with course information, educational
+                  guidance and support so they can make informed decisions
+                  about their next steps.
+                </p>
+
+                <Link to="/about" className="omega-vm-button">
+                  Learn More <ArrowRight size={17} />
+                </Link>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* FEATURED COURSES */}
+      <section className="section omega-home-courses">
         <div className="container">
           <div className="home-section-heading">
             <div>
@@ -124,8 +211,8 @@ export default function Home() {
               </h2>
 
               <p className="home-muted">
-                Explore the available courses and find a programme
-                that matches your educational goals.
+                Explore available courses and find a programme that
+                matches your educational goals.
               </p>
             </div>
 
@@ -135,10 +222,13 @@ export default function Home() {
           </div>
 
           <div className="home-course-grid">
-            {courses.map((course, i) => (
-              <article className="home-course-card" key={course.code}>
-                <div className={`home-course-symbol symbol-${i}`}>
-                  <BookOpen size={26} />
+            {courses.slice(0, 6).map((course, i) => (
+              <article
+                className={`home-course-card home-course-tone-${i % 6}`}
+                key={course.code}
+              >
+                <div className={`home-course-symbol symbol-${i % 3}`}>
+                  <BookOpen size={25} />
                 </div>
 
                 <span className="home-course-code">{course.code}</span>
@@ -151,8 +241,9 @@ export default function Home() {
                   <span>{course.duration}</span>
 
                   <Link
-                    to="/courses"
-                    aria-label={`Details for ${course.name}`}
+                    to="/contact"
+                    state={{ course: course.name }}
+                    aria-label={`Enquire about ${course.name}`}
                   >
                     <ArrowRight size={19} />
                   </Link>
@@ -160,10 +251,16 @@ export default function Home() {
               </article>
             ))}
           </div>
+
+          <div className="omega-home-course-action">
+            <Link to="/courses" className="omega-home-all-courses">
+              Explore All Courses <ArrowRight size={18} />
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Institute Highlights */}
+      {/* INSTITUTE HIGHLIGHTS */}
       <section className="home-stats">
         <div className="container home-stats-grid">
           <div>
@@ -192,7 +289,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact CTA */}
+      {/* CONTACT CTA */}
       <section className="home-cta">
         <div className="container home-cta-inner">
           <div>
@@ -213,5 +310,5 @@ export default function Home() {
         </div>
       </section>
     </>
-  )
+  );
 }

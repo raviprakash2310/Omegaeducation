@@ -17,3 +17,67 @@ body {
     padding-top: 112px;
   }
 }
+
+
+
+
+
+
+
+.floating-contact {
+  position: fixed;
+  left: 28px;
+  right: 28px;
+  bottom: 24px;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+}
+
+.floating-contact a {
+  box-sizing: border-box;
+  width: 58px;
+  height: 58px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.22);
+  text-decoration: none;
+  pointer-events: auto;
+  transition: transform 0.2s ease;
+}
+
+.floating-contact a:hover {
+  transform: scale(1.06);
+}
+
+.floating-contact-call {
+  background: #176b48;
+}
+
+.floating-contact-whatsapp {
+  background: #25D366;
+}
+
+.floating-contact-whatsapp svg {
+  display: block;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .floating-contact {
+    left: 12px;
+    right: 12px;
+    bottom: 14px;
+  }
+
+  .floating-contact a {
+    width: 50px;
+    height: 50px;
+  }
+}

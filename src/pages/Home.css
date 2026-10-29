@@ -1,21 +1,37 @@
-/* Home-only custom styles; Tailwind utilities are also used in JSX */
-.home-hero{background:linear-gradient(115deg,#351160,#4c2089 55%,#6634a0);color:#fff}.home-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:48px;padding-top:64px;padding-bottom:68px}.home-hero-copy h1{margin:0 0 20px;font-size:clamp(38px,4.5vw,58px);font-weight:800;letter-spacing:-1.8px;line-height:1.12}.home-hero-copy h1 span{color:#ffd15c}.home-hero-description{max-width:490px;margin-bottom:25px;color:#eee5f7;font-size:14px;line-height:1.9}.home-gold-button{background:#f5b51b;color:#211735}.home-gold-button:hover{color:#211735;background:#ffd15c}.home-outline-button{border:1px solid #ffffff80;background:transparent}.home-hero-points{display:flex;flex-wrap:wrap;gap:20px;margin-top:28px;color:#eee5f7;font-size:12px}.home-hero-points span{display:inline-flex;align-items:center;gap:8px}.home-hero-image-wrap{position:relative;padding:0 0 20px 18px}.home-hero-image-wrap:before{content:'';position:absolute;inset:20px 18px 0 0;border:1px solid #ffffff70;border-radius:170px 170px 12px 12px}.home-hero-image-wrap>img{position:relative;width:100%;height:355px;object-fit:cover;border-radius:170px 170px 12px 12px}.home-image-note{position:absolute;bottom:0;left:0;display:flex;align-items:center;gap:12px;padding:13px 17px;border-radius:8px;background:#fff;color:#202235;box-shadow:0 12px 32px #170b2c28}.home-image-note>svg{color:#805a00;width:38px;height:38px;padding:7px;border-radius:50%;background:#fff3ca}.home-image-note strong,.home-image-note small{display:block}.home-image-note strong{font-size:12px}.home-image-note small{margin-top:4px;color:#6d7080;font-size:10px}.home-band{background:#2d1052}.home-band i{width:5px;height:5px;border-radius:50%;background:#f5b51b}.home-intro-grid{display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;gap:70px}.home-intro-art{position:relative;min-height:290px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;border-radius:15px;color:#40177a;background:linear-gradient(145deg,#eee6fa,#d8c4f0)}.home-intro-art strong{font-size:20px}.home-intro-badge{position:absolute;right:-10px;bottom:-12px;padding:16px 20px;border-radius:9px;background:#064b49;color:#fff;font-size:12px}.home-section-title{margin:0 0 17px;font-size:clamp(29px,3.4vw,40px);font-weight:800;line-height:1.2;letter-spacing:-1px}.home-section-title span{color:#40177a}.home-muted{color:#6d7080;font-size:13px;line-height:1.9}.home-section-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:30px}.home-text-link{display:inline-flex;align-items:center;gap:8px;margin-top:12px;color:#40177a;font-size:13px;font-weight:800}.home-course-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.home-course-card{position:relative;padding:24px;border:1px solid #ece8f2;border-radius:10px;background:#fff;transition:transform .2s,box-shadow .2s}.home-course-card:hover{transform:translateY(-4px);box-shadow:0 14px 35px #26114310}.home-course-symbol{display:grid;place-items:center;width:50px;height:50px;margin-bottom:20px;border-radius:11px;background:#efe5fb;color:#40177a}.home-course-symbol.symbol-1{background:#e1f3ef;color:#064b49}.home-course-symbol.symbol-2{background:#fff2d0;color:#8b6200}.home-course-code{position:absolute;top:30px;right:23px;color:#a19aab;font-size:10px;font-weight:800}.home-course-card h3{margin:0 0 10px;font-size:17px;font-weight:800}.home-course-card>p{color:#6d7080;font-size:12px;line-height:1.8}.home-course-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:20px;padding-top:14px;border-top:1px solid #eeeaf3;color:#6d7080;font-size:11px}.home-course-bottom a{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#f0e8fb;color:#40177a}.home-stats{padding:28px 0;background:#064b49;color:#fff}.home-stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.home-stats-grid>div{display:grid;grid-template-columns:34px 1fr;align-items:center;column-gap:10px}.home-stats-grid svg{grid-row:span 2;color:#f5c74a}.home-stats-grid strong{font-size:12px}.home-stats-grid span{margin-top:4px;color:#c4ded9;font-size:10px}.home-cta{padding:55px 0;background:#40177a;color:#fff}.home-cta-inner{display:flex;align-items:center;justify-content:space-between;gap:25px}.home-cta h2{margin:0 0 10px;font-size:clamp(24px,3vw,35px);font-weight:800}.home-cta-inner>div>p:last-child{color:#e2d6f1;font-size:13px}@media(max-width:800px){.home-hero-grid,.home-intro-grid{grid-template-columns:1fr;gap:35px}.home-hero-grid{padding-top:48px;padding-bottom:48px}.home-hero-image-wrap{max-width:500px;width:100%;margin:auto}.home-course-grid{grid-template-columns:1fr}.home-section-heading{align-items:start;flex-direction:column}.home-stats-grid{grid-template-columns:repeat(2,1fr);row-gap:24px}.home-cta-inner{align-items:start;flex-direction:column}}@media(max-width:480px){.home-hero-copy h1{font-size:37px}.home-hero-image-wrap>img{height:270px}.home-hero-points{gap:12px}.home-band .container{letter-spacing:1px;font-size:9px}}
 
+/* ==========================================
+   OHEC HOME PAGE
+   Responsive desktop, tablet and mobile
+========================================== */
 
-/* OMEGA ABOUT SECTION */
+.omega-about,
+.omega-about *,
+.omega-vision-mission,
+.omega-vision-mission *,
+.omega-home-courses,
+.omega-home-courses *,
+.omega-floating-contact,
+.omega-floating-contact * {
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   ABOUT OMEGA
+========================================== */
+
 .omega-about {
-  padding: 90px 24px;
-  background: #fff;
+  padding: 76px 24px;
   overflow: hidden;
+  background: #fff;
 }
 
 .omega-about-container {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  align-items: center;
+  gap: 55px;
   width: min(1420px, 100%);
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
-  align-items: center;
-  gap: 65px;
 }
 
 .omega-about-copy {
@@ -26,19 +42,19 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 0 0 28px;
+  margin: 0 0 23px;
   color: #175744;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 800;
+  letter-spacing: 1px;
 }
 
 .omega-about-copy h2 {
-  margin: 0 0 26px;
+  margin: 0 0 20px;
   color: #19458e;
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(38px, 3.3vw, 55px);
-  font-weight: 700;
-  line-height: 1.16;
+  font-size: clamp(32px, 3.2vw, 49px);
+  line-height: 1.2;
 }
 
 .omega-about-copy h2 span {
@@ -47,222 +63,168 @@
 
 .omega-about-description {
   margin: 0;
-  color: #696969;
-  font-size: 17px;
-  line-height: 1.65;
+  color: #656d69;
+  font-size: 15px;
+  line-height: 1.9;
 }
 
 .omega-about-actions {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 38px;
+  gap: 20px;
+  margin-top: 29px;
 }
 
 .omega-about-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  min-height: 54px;
-  padding: 0 24px;
+  gap: 9px;
+  min-height: 49px;
+  padding: 0 20px;
   border-radius: 9px;
-  background: linear-gradient(110deg, #206d50, #101010);
+  background: linear-gradient(110deg, #206d50, #101b16);
   color: #fff;
+  font-size: 13px;
   font-weight: 700;
   text-decoration: none;
-  transition: 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .omega-about-button:hover {
-  background: #ffc52e;
-  color: #173b2d;
   transform: translateY(-2px);
+  box-shadow: 0 8px 20px #17574430;
 }
 
 .omega-video-link {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  color: #171717;
+  gap: 10px;
+  color: #172b22;
+  font-size: 13px;
   text-decoration: none;
 }
 
 .omega-video-icon {
-  width: 52px;
-  height: 52px;
   display: grid;
   place-items: center;
+  width: 43px;
+  height: 43px;
   border: 1px solid #175744;
   border-radius: 50%;
+  background: #eff7f1;
   color: #175744;
-  background: #f1f7f4;
 }
 
 .omega-about-visual {
+  position: relative;
   min-width: 0;
 }
 
 .omega-about-main-image {
   position: relative;
-  height: 440px;
+  height: 390px;
 }
 
 .omega-about-main-image img {
   display: block;
   width: 100%;
   height: 100%;
+  border-radius: 12px;
   object-fit: cover;
-  border-radius: 3px;
 }
 
 .omega-experience-badge {
   position: absolute;
-  top: -18px;
-  right: -18px;
+  top: -14px;
+  right: -12px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 110px;
-  min-height: 110px;
-  padding: 12px;
-  border-radius: 13px;
+  width: 100px;
+  min-height: 100px;
+  padding: 10px;
+  border-radius: 14px;
   background: #175744;
   color: #fff;
   text-align: center;
-  box-shadow: 0 5px 18px #0002;
+  box-shadow: 0 7px 20px #0002;
 }
 
 .omega-experience-badge strong {
   font-family: Georgia, serif;
-  font-size: 25px;
+  font-size: 23px;
 }
 
 .omega-experience-badge span {
-  font-size: 12px;
+  font-size: 10px;
   line-height: 1.5;
 }
 
 .omega-feature-cards {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-  margin-top: 30px;
+  gap: 14px;
+  margin-top: 22px;
 }
 
 .omega-feature-card {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
+  gap: 13px;
   min-width: 0;
-  padding: 24px 20px;
-  border: 1px solid #eee;
-  border-radius: 15px;
+  padding: 18px;
+  border: 1px solid #e7eee9;
+  border-radius: 13px;
   background: #fff;
-  box-shadow: 0 3px 13px #00000020;
+  box-shadow: 0 5px 18px #102e1b0b;
 }
 
 .omega-feature-icon {
-  flex-shrink: 0;
-  width: 58px;
-  height: 58px;
   display: grid;
   place-items: center;
-  border-radius: 50%;
-  background: #e8f2ee;
+  flex-shrink: 0;
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  background: #e8f5ec;
   color: #175744;
 }
 
 .omega-feature-card h3 {
   margin: 0;
   color: #175744;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 22px;
-  line-height: 1.25;
+  font-family: Georgia, serif;
+  font-size: 17px;
+  line-height: 1.4;
 }
 
 .omega-feature-line {
   display: block;
-  width: 55px;
+  width: 42px;
   height: 3px;
-  margin: 12px 0;
-  background: #dca82e;
+  margin: 9px 0;
+  border-radius: 3px;
+  background: #e7b53f;
 }
 
 .omega-feature-card p {
   margin: 0;
-  color: #555;
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-@media (max-width: 1000px) {
-  .omega-about-container {
-    grid-template-columns: 1fr;
-    gap: 45px;
-  }
-
-  .omega-about-main-image {
-    height: 420px;
-  }
-}
-
-@media (max-width: 600px) {
-  .omega-about {
-    padding: 60px 20px;
-  }
-
-  .omega-about-copy h2 {
-    font-size: 36px;
-  }
-
-  .omega-about-description {
-    font-size: 15px;
-  }
-
-  .omega-about-actions {
-    align-items: flex-start;
-    gap: 22px;
-  }
-
-  .omega-about-main-image {
-    height: 280px;
-  }
-
-  .omega-experience-badge {
-    top: -12px;
-    right: -8px;
-    width: 90px;
-    min-height: 90px;
-  }
-
-  .omega-feature-cards {
-    grid-template-columns: 1fr;
-  }
-
-  .omega-feature-card {
-    padding: 20px 16px;
-  }
-}
-
-
-
-/* Floating graduation cap and diploma */
-.omega-about-visual {
-  position: relative;
-  overflow: visible;
+  color: #66716a;
+  font-size: 12px;
+  line-height: 1.7;
 }
 
 .omega-floating-graduation {
   position: absolute;
-  right: -28px;
-  bottom: -22px;
-  width: 175px;
-  z-index: 10;
+  right: -14px;
+  bottom: -16px;
+  z-index: 2;
+  width: 125px;
   pointer-events: none;
-  animation: omegaGraduationFloat 3s ease-in-out infinite;
+  animation: omegaCapFloat 3s ease-in-out infinite;
 }
 
 .omega-floating-graduation img {
@@ -270,29 +232,1523 @@
   width: 100%;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 8px 8px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(0 7px 8px #0002);
 }
 
-@keyframes omegaGraduationFloat {
+@keyframes omegaCapFloat {
   0%, 100% {
-    transform: translateY(0) rotate(-3deg);
+    transform: translateY(0) rotate(-2deg);
   }
 
   50% {
-    transform: translateY(-12px) rotate(2deg);
+    transform: translateY(-8px) rotate(2deg);
   }
 }
 
-@media (max-width: 760px) {
-  .omega-floating-graduation {
-    width: 115px;
-    right: -8px;
-    bottom: -15px;
+/* ==========================================
+   VISION AND MISSION HEADING
+========================================== */
+
+.omega-vision-mission {
+  position: relative;
+  isolation: isolate;
+  padding: 78px 0 82px;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 5% 5%, #dff4e8 0, transparent 38%),
+    radial-gradient(ellipse at 95% 90%, #fff1d4 0, transparent 32%),
+    linear-gradient(135deg, #f5fbf6, #fff 54%, #f8fcf8);
+}
+
+.omega-vision-mission::before,
+.omega-vision-mission::after {
+  position: absolute;
+  z-index: -1;
+  width: 240px;
+  height: 240px;
+  border: 1px solid #d7eee0;
+  border-radius: 50%;
+  content: '';
+  pointer-events: none;
+}
+
+.omega-vision-mission::before {
+  top: 90px;
+  left: -150px;
+  box-shadow: 0 0 0 28px #e7f5eb55, 0 0 0 58px #e7f5eb33;
+}
+
+.omega-vision-mission::after {
+  right: -150px;
+  bottom: 10px;
+  border-color: #f5e4bb;
+  box-shadow: 0 0 0 28px #fdf2d755, 0 0 0 58px #fdf2d733;
+}
+
+.omega-vm-heading {
+  max-width: 720px;
+  margin: 0 auto 39px;
+  padding: 0 18px;
+  text-align: center;
+}
+
+.omega-vm-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  margin-bottom: 14px;
+  color: #176744;
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 2px;
+}
+
+.omega-vm-heading-line {
+  display: inline-block;
+  width: 32px;
+  height: 1px;
+  background: #70b79a;
+}
+
+.omega-vm-heading h2 {
+  margin: 0 0 15px;
+  color: #163c2b;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.7px;
+}
+
+.omega-vm-heading h2 span:first-child {
+  color: #1d8057;
+}
+
+.omega-vm-heading h2 span:last-child {
+  color: #d99a15;
+}
+
+.omega-vm-heading > p {
+  max-width: 680px;
+  margin: 0 auto;
+  color: #68776d;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* ==========================================
+   VISION AND MISSION CARDS
+========================================== */
+
+.omega-vm-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.omega-vm-card {
+  position: relative;
+  isolation: isolate;
+  min-width: 0;
+  min-height: 335px;
+  overflow: hidden;
+  border: 1px solid #d5eade;
+  border-top: 5px solid #19754f;
+  border-radius: 21px;
+  background: linear-gradient(145deg, #fff 5%, #f5fff8 72%, #e5f8ed);
+  box-shadow: 0 12px 35px #1757440d;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.omega-vm-card.omega-vm-mission {
+  border-color: #f3e4bd;
+  border-top-color: #e6a019;
+  background: linear-gradient(145deg, #fff 5%, #fffdf6 70%, #fff2cf);
+}
+
+.omega-vm-card:hover {
+  transform: translateY(-7px);
+  border-color: #9bd5b4;
+  box-shadow: 0 22px 45px #17674420;
+}
+
+.omega-vm-card.omega-vm-mission:hover {
+  border-color: #f1cb71;
+  box-shadow: 0 22px 45px #d99a1520;
+}
+
+.omega-vm-card-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 330px;
+  padding: 30px;
+}
+
+.omega-vm-card-top {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin-bottom: 20px;
+}
+
+.omega-vm-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 66px;
+  height: 66px;
+  border: 1px solid #bfe8d0;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #e7f9ee, #d2f0de);
+  color: #19764f;
+  box-shadow: 0 5px 15px #19764f15;
+  transition: transform 0.3s ease, border-radius 0.3s ease;
+}
+
+.omega-vm-mission .omega-vm-icon {
+  border-color: #f4dda0;
+  background: linear-gradient(145deg, #fff6df, #ffedbd);
+  color: #b77a00;
+  box-shadow: 0 5px 15px #d99a1515;
+}
+
+.omega-vm-card:hover .omega-vm-icon {
+  transform: rotate(-5deg) scale(1.06);
+  border-radius: 50%;
+}
+
+.omega-vm-label {
+  display: block;
+  margin-bottom: 10px;
+  color: #19764f;
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 1.8px;
+}
+
+.omega-vm-mission .omega-vm-label {
+  color: #b77a00;
+}
+
+.omega-vm-short-line {
+  display: block;
+  width: 48px;
+  height: 2px;
+  border-radius: 4px;
+  background: #4caa7a;
+}
+
+.omega-vm-mission .omega-vm-short-line {
+  background: #e5a019;
+}
+
+.omega-vm-card h3 {
+  margin: 0 0 12px;
+  color: #183c2c;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(21px, 2vw, 27px);
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.omega-vm-card p {
+  max-width: 560px;
+  margin: 0 0 22px;
+  color: #647369;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.omega-vm-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  min-height: 45px;
+  margin-top: auto;
+  padding: 0 21px;
+  border-radius: 30px;
+  background: linear-gradient(100deg, #126342, #14a36a);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 6px 14px #19764f18;
+  transition: gap 0.25s ease, box-shadow 0.25s ease;
+}
+
+.omega-vm-mission .omega-vm-button {
+  background: linear-gradient(100deg, #bc7800, #f3ad00);
+  box-shadow: 0 6px 14px #d99a151b;
+}
+
+.omega-vm-button:hover {
+  gap: 16px;
+  box-shadow: 0 8px 18px #19764f25;
+}
+
+.omega-vm-decoration {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.omega-vm-dots {
+  top: 25px;
+  right: 22px;
+  width: 65px;
+  height: 65px;
+  opacity: 0.55;
+  background-image: radial-gradient(#75c69a 2px, transparent 2px);
+  background-size: 15px 15px;
+  transition: transform 0.3s ease;
+}
+
+.omega-vm-mission .omega-vm-dots {
+  background-image: radial-gradient(#e9bd52 2px, transparent 2px);
+}
+
+.omega-vm-card:hover .omega-vm-dots {
+  transform: translate(-5px, 5px);
+}
+
+.omega-vm-bottom-shape {
+  right: -40px;
+  bottom: -100px;
+  width: 310px;
+  height: 155px;
+  border-radius: 50% 0 0 0;
+  background: linear-gradient(140deg, #c9f0d9, #42c58b);
+  opacity: 0.65;
+  transform: rotate(-8deg);
+  transition: transform 0.4s ease;
+}
+
+.omega-vm-mission .omega-vm-bottom-shape {
+  background: linear-gradient(140deg, #fff0bd, #ffca39);
+}
+
+.omega-vm-card:hover .omega-vm-bottom-shape {
+  transform: rotate(-13deg) translateY(-7px);
+}
+
+/* ==========================================
+   FEATURED COURSES
+========================================== */
+
+.omega-home-courses {
+  background: linear-gradient(180deg, #f5faf6, #fff);
+}
+
+.home-section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.home-section-title {
+  margin: 0 0 13px;
+  color: #183c2c;
+  font-size: clamp(28px, 3.2vw, 39px);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.home-section-title span {
+  color: #1f6b45;
+}
+
+.home-muted {
+  color: #68776d;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.home-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  margin-bottom: 8px;
+  color: #1f6b45;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.home-course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+}
+
+.home-course-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 23px;
+  border: 1px solid #e1ebe3;
+  border-top: 4px solid #1f6b45;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #fff, #f4faf5);
+  box-shadow: 0 7px 22px #183c2c09;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.home-course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px #183c2c15;
+}
+
+.home-course-tone-0 { border-top-color: #d64b52; }
+.home-course-tone-1 { border-top-color: #1f6b45; }
+.home-course-tone-2 { border-top-color: #e0a12d; }
+.home-course-tone-3 { border-top-color: #3976cf; }
+.home-course-tone-4 { border-top-color: #8752bd; }
+.home-course-tone-5 { border-top-color: #159a91; }
+
+.home-course-symbol {
+  display: grid;
+  place-items: center;
+  width: 51px;
+  height: 51px;
+  margin-bottom: 17px;
+  border-radius: 14px;
+  background: #e8f5ec;
+  color: #1f6b45;
+}
+
+.home-course-code {
+  position: absolute;
+  top: 29px;
+  right: 20px;
+  color: #8b998f;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.home-course-card h3 {
+  margin: 0 0 10px;
+  color: #183c2c;
+  font-size: 19px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.home-course-card > p {
+  flex: 1;
+  margin: 0;
+  color: #68776d;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.home-course-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid #e1ebe3;
+}
+
+.home-course-bottom > span {
+  color: #68776d;
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+
+.home-course-bottom a {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 39px;
+  height: 39px;
+  border-radius: 11px;
+  background: #1f6b45;
+  color: #fff;
+  transition: background 0.2s ease;
+}
+
+.home-course-bottom a:hover {
+  background: #174d32;
+}
+
+.omega-home-course-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.omega-home-all-courses {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 47px;
+  padding: 12px 23px;
+  border-radius: 9px;
+  background: #1f6b45;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.omega-home-all-courses:hover {
+  background: #174d32;
+}
+
+/* ==========================================
+   INSTITUTE STATS
+========================================== */
+
+.home-stats {
+  padding: 30px 0;
+  background: #145a43;
+  color: #fff;
+}
+
+.home-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.home-stats-grid > div {
+  display: grid;
+  grid-template-columns: 35px minmax(0, 1fr);
+  align-items: center;
+  column-gap: 10px;
+}
+
+.home-stats-grid svg {
+  grid-row: span 2;
+  color: #f5c64d;
+}
+
+.home-stats-grid strong {
+  font-size: 12px;
+}
+
+.home-stats-grid span {
+  margin-top: 4px;
+  color: #d3e6dc;
+  font-size: 10px;
+}
+
+/* ==========================================
+   CONTACT CTA
+========================================== */
+
+.home-cta {
+  padding: 52px 0;
+  background: linear-gradient(110deg, #153f30, #211631);
+  color: #fff;
+}
+
+.home-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.home-cta h2 {
+  margin: 0 0 10px;
+  font-size: clamp(24px, 3vw, 35px);
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.home-cta-inner > div > p:last-child {
+  color: #e1e9e3;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.home-gold-button {
+  flex-shrink: 0;
+}
+
+/* ==========================================
+   FIXED ROUND CALL & WHATSAPP BUTTONS
+   Call: bottom-left
+   WhatsApp: bottom-right
+========================================== */
+
+.omega-floating-contact {
+  position: fixed;
+  right: 0;
+  bottom: 23px;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 25px;
+  pointer-events: none;
+}
+
+.omega-floating-contact a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #20382c;
+  font-size: 11px;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: none;
+  pointer-events: auto;
+  transition: transform 0.25s ease;
+}
+
+.omega-floating-contact a:hover {
+  transform: translateY(-4px);
+  box-shadow: none;
+}
+
+.omega-floating-contact a > svg,
+.omega-floating-contact a > svg:not([viewBox]) {
+  flex-shrink: 0;
+}
+
+.omega-floating-contact a > span {
+  display: block;
+  padding: 5px 12px;
+  border: 1px solid #e9eee9;
+  border-radius: 20px;
+  background: #fff;
+  color: #233a2d;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.3;
+  box-shadow: 0 4px 12px #00000012;
+}
+
+.omega-floating-contact .omega-float-call,
+.omega-floating-contact .omega-float-whatsapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+  min-height: 68px;
+  padding: 0;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  box-shadow: 0 5px 18px #00000020;
+}
+
+.omega-floating-contact .omega-float-call {
+  background: #176b49;
+}
+
+.omega-floating-contact .omega-float-whatsapp {
+  background: #19c765;
+}
+
+.omega-floating-contact .omega-float-call > svg {
+  width: 27px;
+  height: 27px;
+}
+
+.omega-floating-contact .omega-float-whatsapp > svg {
+  width: 29px;
+  height: 29px;
+}
+
+.omega-floating-contact .omega-float-call > span,
+.omega-floating-contact .omega-float-whatsapp > span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1000px) {
+  .omega-about-container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 38px;
   }
+
+  .omega-about-copy h2 {
+    font-size: clamp(32px, 5vw, 44px);
+  }
+
+  .omega-about-visual {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .home-course-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 24px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 760px) {
+  .omega-about {
+    padding: 46px 17px;
+  }
+
+  .omega-about-container {
+    gap: 30px;
+  }
+
+  .omega-about-eyebrow {
+    margin-bottom: 16px;
+    font-size: 12px;
+  }
+
+  .omega-about-copy h2 {
+    margin-bottom: 16px;
+    font-size: clamp(28px, 7vw, 36px);
+    line-height: 1.23;
+  }
+
+  .omega-about-description {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .omega-about-actions {
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 22px;
+  }
+
+  .omega-about-button {
+    min-height: 45px;
+    padding: 0 14px;
+    font-size: 11px;
+  }
+
+  .omega-video-link {
+    gap: 8px;
+    font-size: 11px;
+  }
+
+  .omega-video-icon {
+    width: 39px;
+    height: 39px;
+  }
+
+  .omega-about-main-image {
+    height: 275px;
+  }
+
+  .omega-experience-badge {
+    top: -9px;
+    right: -5px;
+    width: 78px;
+    min-height: 78px;
+    padding: 7px;
+  }
+
+  .omega-experience-badge strong {
+    font-size: 19px;
+  }
+
+  .omega-experience-badge span {
+    font-size: 9px;
+  }
+
+  .omega-feature-cards {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    margin-top: 18px;
+  }
+
+  .omega-feature-card {
+    padding: 15px;
+  }
+
+  .omega-feature-card h3 {
+    font-size: 17px;
+  }
+
+  .omega-feature-card p {
+    font-size: 12px;
+  }
+
+  .omega-floating-graduation {
+    right: -4px;
+    bottom: -9px;
+    width: 85px;
+  }
+
+  /* Vision and mission heading */
+  .omega-vision-mission {
+    padding: 47px 0 50px;
+  }
+
+  .omega-vm-heading {
+    margin-bottom: 26px;
+    padding: 0 18px;
+  }
+
+  .omega-vm-eyebrow {
+    gap: 8px;
+    margin-bottom: 12px;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+
+  .omega-vm-heading-line {
+    width: 22px;
+  }
+
+  .omega-vm-heading h2 {
+    margin-bottom: 12px;
+    font-size: clamp(27px, 7vw, 34px);
+    letter-spacing: -0.4px;
+  }
+
+  .omega-vm-heading > p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  /* Stack cards vertically */
+  .omega-vm-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .omega-vm-card {
+    min-height: 0;
+    border-radius: 17px;
+  }
+
+  .omega-vm-card:hover {
+    transform: translateY(-3px);
+  }
+
+  .omega-vm-card-inner {
+    min-height: 0;
+    padding: 23px 21px 25px;
+  }
+
+  .omega-vm-card-top {
+    gap: 13px;
+    margin-bottom: 19px;
+  }
+
+  .omega-vm-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 16px;
+  }
+
+  .omega-vm-icon svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .omega-vm-label {
+    margin-bottom: 8px;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  .omega-vm-card h3 {
+    margin-bottom: 10px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .omega-vm-card p {
+    margin-bottom: 19px;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .omega-vm-button {
+    min-height: 42px;
+    padding: 0 18px;
+    font-size: 11px;
+  }
+
+  .omega-vm-dots {
+    top: 18px;
+    right: 14px;
+    width: 48px;
+    height: 48px;
+    background-size: 12px 12px;
+  }
+
+  .omega-vm-bottom-shape {
+    right: -60px;
+    bottom: -110px;
+    width: 240px;
+    height: 140px;
+  }
+
+  /* Courses */
+  .home-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 23px;
+  }
+
+  .home-section-title {
+    font-size: 27px;
+    letter-spacing: -0.4px;
+  }
+
+  .home-muted {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .home-text-link {
+    margin: 4px 0 0;
+    font-size: 12px;
+  }
+
+  .home-course-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .home-course-card {
+    padding: 18px;
+    border-radius: 13px;
+  }
+
+  .home-course-symbol {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 14px;
+  }
+
+  .home-course-card h3 {
+    font-size: 18px;
+  }
+
+  .home-course-card > p {
+    font-size: 12px;
+    line-height: 1.75;
+  }
+
+  .home-course-bottom {
+    margin-top: 15px;
+    padding-top: 12px;
+  }
+
+  .omega-home-course-action {
+    margin-top: 22px;
+  }
+
+  .omega-home-all-courses {
+    width: 100%;
+    min-height: 45px;
+    padding: 11px 15px;
+    font-size: 12px;
+  }
+
+  /* Statistics */
+  .home-stats {
+    padding: 24px 0;
+  }
+
+  .home-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 12px;
+  }
+
+  .home-stats-grid > div {
+    grid-template-columns: 27px minmax(0, 1fr);
+    column-gap: 8px;
+  }
+
+  .home-stats-grid svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .home-stats-grid strong {
+    font-size: 11px;
+  }
+
+  .home-stats-grid span {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  /* CTA */
+  .home-cta {
+    padding: 37px 0;
+  }
+
+  .home-cta-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 17px;
+  }
+
+  .home-cta h2 {
+    font-size: 25px;
+  }
+
+  .home-cta-inner > div > p:last-child {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  /* Round fixed buttons: opposite corners */
+  .omega-floating-contact {
+    right: 0;
+    bottom: 13px;
+    left: 0;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0 12px;
+  }
+
+  .omega-floating-contact .omega-float-call,
+  .omega-floating-contact .omega-float-whatsapp {
+    width: 55px;
+    height: 55px;
+    min-height: 55px;
+    border-width: 3px;
+  }
+
+  .omega-floating-contact .omega-float-call > svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .omega-floating-contact .omega-float-whatsapp > svg {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE PHONES
+========================================== */
+
+@media (max-width: 380px) {
+  .omega-about {
+    padding: 38px 14px;
+  }
+
+  .omega-about-copy h2 {
+    font-size: 27px;
+  }
+
+  .omega-about-main-image {
+    height: 225px;
+  }
+
+  .omega-about-actions {
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  .omega-vm-heading {
+    padding: 0 12px;
+  }
+
+  .omega-vm-heading h2 {
+    font-size: 26px;
+  }
+
+  .omega-vm-heading-line {
+    width: 16px;
+  }
+
+  .omega-vm-card-inner {
+    padding: 20px 17px 22px;
+  }
+
+  .omega-vm-card h3 {
+    font-size: 19px;
+  }
+
+  .omega-vm-card p {
+    font-size: 12px;
+  }
+
+  .home-course-card {
+    padding: 16px;
+  }
+
+  .home-course-code {
+    right: 15px;
+  }
+
+  .omega-floating-contact {
+    bottom: 10px;
+    padding: 0 9px;
+  }
+
+  .omega-floating-contact .omega-float-call,
+  .omega-floating-contact .omega-float-whatsapp {
+    width: 49px;
+    height: 49px;
+    min-height: 49px;
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+.omega-about-button,
+.omega-vm-button,
+.home-course-bottom a,
+.omega-home-all-courses,
+.omega-floating-contact a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.omega-about-button:focus-visible,
+.omega-vm-button:focus-visible,
+.home-course-bottom a:focus-visible,
+.omega-home-all-courses:focus-visible,
+.omega-floating-contact a:focus-visible {
+  outline: 3px solid #e5a019;
+  outline-offset: 4px;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .omega-floating-graduation {
     animation: none;
+  }
+
+  .omega-vm-card,
+  .omega-vm-icon,
+  .omega-vm-button,
+  .omega-vm-dots,
+  .omega-vm-bottom-shape,
+  .home-course-card,
+  .omega-about-button,
+  .omega-floating-contact a {
+    transition: none;
+  }
+
+  .omega-vm-card:hover,
+  .home-course-card:hover,
+  .omega-floating-contact a:hover {
+    transform: none;
+  }
+}
+
+
+/* =========================================
+   HOME COURSES SECTION — DESIGN FIX
+========================================= */
+
+.omega-home-courses {
+  padding: 72px 0 76px;
+  background:
+    radial-gradient(circle at 0% 0%, #e8f5ec 0, transparent 35%),
+    linear-gradient(180deg, #f8fbf8 0%, #ffffff 100%);
+}
+
+.omega-home-courses .container {
+  width: min(1280px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.omega-home-courses .home-section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+.omega-home-courses .home-section-title {
+  margin: 8px 0 12px;
+  color: #173f2d;
+  font-size: clamp(30px, 3.2vw, 44px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.omega-home-courses .home-section-title span {
+  color: #218252;
+}
+
+.omega-home-courses .home-muted {
+  margin: 0;
+  color: #65766b;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.omega-home-courses .home-text-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-shrink: 0;
+  padding: 12px 18px;
+  border: 1px solid #cfe5d5;
+  border-radius: 10px;
+  background: #fff;
+  color: #176b45;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.omega-home-courses .home-text-link:hover {
+  border-color: #176b45;
+  background: #176b45;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.omega-home-courses .home-course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 24px;
+}
+
+.omega-home-courses .home-course-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 300px;
+  padding: 27px;
+  overflow: hidden;
+  border: 1px solid #deebe1;
+  border-top: 5px solid #1f6b45;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #fff 35%, #f1f9f3 100%);
+  box-shadow: 0 10px 30px rgba(25, 73, 46, 0.07);
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease;
+}
+
+.omega-home-courses .home-course-card::after {
+  position: absolute;
+  right: -42px;
+  bottom: -65px;
+  width: 145px;
+  height: 145px;
+  border: 18px solid rgba(31, 107, 69, 0.07);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
+
+.omega-home-courses .home-course-card:hover {
+  transform: translateY(-7px);
+  border-color: #b9d9c3;
+  box-shadow: 0 20px 42px rgba(25, 73, 46, 0.13);
+}
+
+.omega-home-courses .home-course-card:hover::after {
+  transform: scale(1.12);
+}
+
+.omega-home-courses .home-course-tone-0 {
+  border-top-color: #e54854;
+}
+
+.omega-home-courses .home-course-tone-1 {
+  border-top-color: #1f6b45;
+}
+
+.omega-home-courses .home-course-tone-2 {
+  border-top-color: #e6a019;
+}
+
+.omega-home-courses .home-course-symbol {
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 23px;
+  border-radius: 18px;
+  background: #e5f5e9;
+  color: #176b45;
+  transition: transform 0.25s ease;
+}
+
+.omega-home-courses .home-course-tone-0 .home-course-symbol {
+  background: #ffeaed;
+  color: #df4350;
+}
+
+.omega-home-courses .home-course-tone-2 .home-course-symbol {
+  background: #fff2d7;
+  color: #c78300;
+}
+
+.omega-home-courses .home-course-card:hover .home-course-symbol {
+  transform: scale(1.07) rotate(-4deg);
+}
+
+.omega-home-courses .home-course-code {
+  position: absolute;
+  top: 34px;
+  right: 25px;
+  z-index: 1;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #fff;
+  color: #176b45;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.omega-home-courses .home-course-card h3 {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 12px;
+  color: #183c2c;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.omega-home-courses .home-course-card > p {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  margin: 0;
+  color: #68776d;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.omega-home-courses .home-course-bottom {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 22px;
+  padding-top: 17px;
+  border-top: 1px solid #deebe1;
+}
+
+.omega-home-courses .home-course-bottom > span {
+  color: #617468;
+  font-size: 12px;
+}
+
+.omega-home-courses .home-course-bottom a {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 15px;
+  background: #1f6b45;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.omega-home-courses .home-course-tone-0 .home-course-bottom a {
+  background: #e54854;
+}
+
+.omega-home-courses .home-course-tone-2 .home-course-bottom a {
+  background: #e6a019;
+}
+
+.omega-home-courses .home-course-bottom a:hover {
+  background: #174d32;
+  transform: translateX(3px);
+}
+
+.omega-home-courses .omega-home-course-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 34px;
+}
+
+.omega-home-courses .omega-home-all-courses {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 54px;
+  padding: 0 28px;
+  border: 1px solid #1f6b45;
+  border-radius: 12px;
+  background: linear-gradient(110deg, #23794f, #145536);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(31, 107, 69, 0.18);
+  transition: all 0.25s ease;
+}
+
+.omega-home-courses .omega-home-all-courses:hover {
+  background: linear-gradient(110deg, #174d32, #103c28);
+  box-shadow: 0 12px 26px rgba(31, 107, 69, 0.25);
+  transform: translateY(-3px);
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .omega-home-courses {
+    padding: 58px 0;
+  }
+
+  .omega-home-courses .home-course-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .omega-home-courses .home-course-card {
+    min-height: 280px;
+    padding: 23px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .omega-home-courses {
+    padding: 42px 0 48px;
+  }
+
+  .omega-home-courses .container {
+    width: calc(100% - 32px);
+  }
+
+  .omega-home-courses .home-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+
+  .omega-home-courses .home-section-title {
+    font-size: 29px;
+    letter-spacing: -0.5px;
+  }
+
+  .omega-home-courses .home-muted {
+    font-size: 13px;
+  }
+
+  .omega-home-courses .home-text-link {
+    min-height: 42px;
+    padding: 10px 14px;
+    font-size: 12px;
+  }
+
+  .omega-home-courses .home-course-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .omega-home-courses .home-course-card {
+    min-height: 0;
+    padding: 22px;
+    border-radius: 16px;
+  }
+
+  .omega-home-courses .home-course-symbol {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 18px;
+    border-radius: 15px;
+  }
+
+  .omega-home-courses .home-course-code {
+    top: 27px;
+    right: 21px;
+  }
+
+  .omega-home-courses .home-course-card h3 {
+    font-size: 20px;
+  }
+
+  .omega-home-courses .home-course-card > p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .omega-home-courses .home-course-bottom {
+    margin-top: 18px;
+    padding-top: 14px;
+  }
+
+  .omega-home-courses .home-course-bottom a {
+    width: 44px;
+    height: 44px;
+    border-radius: 13px;
+  }
+
+  .omega-home-courses .omega-home-course-action {
+    margin-top: 24px;
+  }
+
+  .omega-home-courses .omega-home-all-courses {
+    width: 100%;
+    min-height: 49px;
+    padding: 0 18px;
+    font-size: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .omega-home-courses * {
+    transition: none !important;
+  }
+
+  .omega-home-courses .home-course-card:hover {
+    transform: none;
   }
 }
